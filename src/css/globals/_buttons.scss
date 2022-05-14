@@ -1,0 +1,8 @@
+.btn {
+    &-solid {
+        @apply bg-brand border-brand border-[1px] text-text-dark w-[100%] max-w-[236px] py-[20px] font-semibold text-[18px];
+    }
+    &-outline {
+        @apply bg-transparent text-brand border-brand border-[1px] w-[100%] max-w-[236px] py-[20px] font-semibold text-[18px];
+    }
+}

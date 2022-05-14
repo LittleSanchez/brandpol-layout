@@ -1,0 +1,16 @@
+
+    .text {
+        
+        &-title {
+            @apply text-[48px] sm:text-[96px] font-bold leading-[48px] sm:leading-[96px] text-center;
+        }
+        &-subtitle {
+            @apply text-[20px] sm:text-[26px] font-light leading-[41.3px] text-center;
+        }
+        &-section-side-title {
+            @apply uppercase text-[18px] leading-[21.6px] text-text-dark
+        }
+        &-section-main-title {
+            @apply font-medium text-[32px] leading-[44.8px]
+        }
+    }

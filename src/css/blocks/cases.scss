@@ -1,0 +1,8 @@
+.cases {
+    &__red-text {
+        @apply font-semibold text-[36px] leading-[100%] text-center text-text-danger;
+    }
+    &__green-text {
+        @apply font-semibold text-[36px] leading-[100%] text-center text-text-success;
+    }
+}
