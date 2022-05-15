@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import './globals/_fonts.scss';
+@import './globals/_typo.scss';
+@import './globals/buttons';

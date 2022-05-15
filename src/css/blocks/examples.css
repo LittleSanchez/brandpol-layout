@@ -1,9 +1,3 @@
-.cases__red-text {
-  @apply font-semibold text-[36px] leading-[100%] text-center text-text-danger; }
-
-.cases__green-text {
-  @apply font-semibold text-[36px] leading-[100%] text-center text-text-success; }
-
 .examples__list-active {
   @apply text-brand; }
   .examples__list-active::after {

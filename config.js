@@ -9,13 +9,15 @@ module.exports = {
 			base: "./src",
 			css: "./src/css",
 			js: "./src/js",
-			img: "./src/img"
+			img: "./src/img",
+			fonts: "./src/fonts",
 		},
 		dist: {
 			base: "./dist",
 			css: "./dist/css",
 			js: "./dist/js",
-			img: "./dist/img"
+			img: "./dist/img",
+			fonts: "./dist/fonts",
 		},
 		build: {
 			base: "./build",
