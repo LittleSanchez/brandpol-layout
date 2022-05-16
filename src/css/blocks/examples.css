@@ -1,17 +1,27 @@
 .examples__list-active {
-  @apply text-brand; }
+  @apply text-brand relative; }
   .examples__list-active::after {
-    @apply h-[2px] left-0 right-0 bottom-[1px] w-auto; }
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    background-color: #FFB000; }
 
 .examples__cards-scroll {
   /* Handle */ }
   .examples__cards-scroll::-webkit-scrollbar {
     width: 20px; }
   .examples__cards-scroll::-webkit-scrollbar-track {
-    background: transparent; }
+    background: url("/img/examples/scrollbar-line.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto; }
   .examples__cards-scroll::-webkit-scrollbar-thumb {
     border: 2px solid #FFB000;
-    background: url("/img/examples/scrollbar-img.svg");
+    background: #ffffff url("/img/examples/scrollbar-img.svg");
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
