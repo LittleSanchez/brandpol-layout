@@ -1,0 +1,65 @@
+@tailwind base;
+
+@layer base {
+    .form {
+        &__checkbox-container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            // margin-bottom: 12px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            & input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+            &:hover input ~ .checkmark {
+                background-color: transparent;
+                border: 1px solid black;
+            }
+            & input:checked ~ .checkmark {
+                background-color: transparent;
+            }
+
+            & input:checked ~ .checkmark:after {
+                display: block;
+            }
+        }
+        &__checkbox-container .checkmark:after {
+            left: 2px;
+            right: 2px;
+            top: 1.5px;
+            bottom: 2.5px;
+            width: 30%;
+            height: auto;
+            margin: auto auto;
+            border: solid black;
+            border-width: 0 1px 1px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 3px;
+            left: 0;
+            height: 16px;
+            width: 16px;
+            background-color: #eee;
+            border: 1px solid black;
+        }
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+}

@@ -1,677 +1,1961 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Gulp with TailwindCSS</title>
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Gulp with TailwindCSS</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-</head>
-
-<body class="text-text-dark leading-[100%] box-border font-museo">
-    <section id="header" class="text-white">
-        <div class="p-0 m-0 w-[100%] bg-header-cover bg-cover min-h-screen">
+    <body class="text-text-dark leading-[100%] box-border font-museo">
+        <section id="header" class="text-white">
+            <div class="p-0 m-0 w-[100%] bg-header-cover bg-cover min-h-screen">
                 <div class="container">
-                <div id="navbar" class="flex justify-between items-center py-[10px] mb-[174px]">
-                <div></div>
-                <img src="/img/logo.svg" class="h-[80px]" alt="logo" />
-                <div></div>
+                    <div
+                        id="navbar"
+                        class="grid grid-cols-3 md:grid-cols-3 items-center py-[20px] lg:py-[10px] mb-[174px]"
+                    >
+                        <div class="flex flex-wrap col-span-2 md:col-span-1 mb-[20px] md:mb-0">
+                            <a class="mr-[40px] lg:mr-[73px] mb-0 flex items-center text-[18px] leading-[18px] uppercase" href="#">
+                                <img class="mr-[20px]" src="/img/navbar/burger.svg" alt="">
+                                <span>Menu</span>
+                            </a>
+                            <a class="flex items-center text-[18px] leading-[18px] uppercase" href="#">
+                                <img class="mr-[20px] " src="/img/navbar/global.svg" alt="">
+                                <span class="mr-[8px] ">en</span>
+                                <img src="/img/navbar/global-right-arrow.svg" alt="">
+                            </a>
+
+                        </div>
+                        <div class="flex justify-end md:justify-center row-span-2 md:row-span-1">
+                            <img src="/img/logo.svg" class="h-[80px]" alt="logo" />
+                        </div>
+                        <div class="flex flex-wrap flex-row md:flex-row-reverse items-center col-span-2 md:col-span-1" >
+                            <a class="text-[18px] leading-[18px] underline ml-0 mr-[50px] md:mr-0 md:ml-[50px] xl:ml-[74px] mb-0" href="#">Get in touch</a>
+                            <div class="flex">
+                                <a href="#">
+                                    <img src="/img/navbar/youtube.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img class="ml-[20px]" src="/img/navbar/facebook.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center mb-[40px]">
+                    <a href="#">Home</a>
+                    <div class="w-[12px] h-[1px] bg-white mx-[15px]"></div>
+                    <a href="#">Services</a>
+                    <div class="w-[12px] h-[1px] bg-white mx-[15px]"></div>
+                    <a href="#">Reputation Booster</a>
+                </div>
+                <div
+                    class="flex justify-center items-center flex-col mb-[48px]"
+                >
+                    <h1 class="text-title mb-[32px]">
+                        Управляй своей репутацией
+                    </h1>
+                    <p class="text-subtitle">
+                        Уникальная система управления репутацией для увеличения
+                        ваших продаж
+                    </p>
+                </div>
+                <div
+                    class="flex justify-center items-center flex-col sm:flex-row"
+                >
+                    <button
+                        class="btn-solid my-[10px] sm:my-0 mx-0 sm:mx-[20px]"
+                    >
+                        Оставить заявку
+                    </button>
+                    <button
+                        class="btn-outline my-[10px] sm:my-0 mx-0 sm:mx-[20px]"
+                    >
+                        Каталог услуг
+                    </button>
+                </div>
             </div>
-            <div class="flex justify-center items-center mb-[40px]">
-                <a href="#">Home</a>
-                <div class="w-[12px] h-[1px] bg-white mx-[15px]"></div>
-                <a href="#">Services</a>
-                <div class="w-[12px] h-[1px] bg-white mx-[15px]"></div>
-                <a href="#">Reputation Booster</a>
+        </section>
+        <section class="container py-[120px] cases">
+            <div class="grid grid-cols-12 items-center mb-[60px]">
+                <div
+                    class="col-span-12 sm:col-span-2 text-section-side-title mb-[8px] sm:mb-0"
+                >
+                    Кейсы
+                </div>
+                <div class="col-span-12 sm:col-span-10">
+                    <h3 class="text-section-main-title">
+                        Реальные результаты наших клиентов
+                    </h3>
+                </div>
             </div>
-            <div class="flex justify-center items-center flex-col mb-[48px]">
-                <h1 class="text-title mb-[32px]">
-                    Управляй своей репутацией
-                </h1>
-                <p class="text-subtitle">
-                    Уникальная система управления репутацией для увеличения ваших продаж
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 sm:col-start-3 sm:col-span-10">
+                    <div class="tableOwl owl-carousel owl-theme">
+                        <div
+                            class="grid grid-cols-2 sm:grid-cols-4 border-[1px] border-border-primary"
+                        >
+                            <div
+                                class="bg-table-title py-[25px] col-span-2 sm:col-span-4 text-[28px] leading-[36px] font-semibold text-center border-b-[1px] border-border-primary"
+                            >
+                                Кафе «Ромашка»
+                            </div>
+                            <div class="col-span-2">
+                                <p
+                                    class="bg-table-subtitle py-[20px] uppercase text-[20px] leading-[20px] font-semibold text-center border-border-primary border-b-[1px] sm:border-r-[1px]"
+                                >
+                                    До
+                                </p>
+                                <ul
+                                    class="list-none border-border-primary sm:border-r-[1px]"
+                                >
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">Отзывов:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__red-text">8</p>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">Рейтинг:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <img
+                                                class="h-[26px]"
+                                                src="/img/cases/stars-left.svg"
+                                                alt="start-left"
+                                            />
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">
+                                            Заявок в месяц:
+                                        </p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__red-text">10</p>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center"
+                                    >
+                                        <p class="col-span-4">Конверсия:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__red-text">0,5%</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-span-2">
+                                <p
+                                    class="bg-table-subtitle py-[20px] uppercase text-[20px] leading-[20px] font-semibold text-center border-border-primary border-b-[1px]"
+                                >
+                                    После
+                                </p>
+                                <ul
+                                    class="list-none border-border-primary sm:border-r-[1px]"
+                                >
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">Отзывов:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__green-text">53</p>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">Рейтинг:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <img
+                                                class="h-[26px]"
+                                                src="/img/cases/stars-right.svg"
+                                                alt="start-left"
+                                            />
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">
+                                            Заявок в месяц:
+                                        </p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__green-text">35</p>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center"
+                                    >
+                                        <p class="col-span-4">Конверсия:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__green-text">
+                                                1,7%
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div
+                            class="grid grid-cols-2 sm:grid-cols-4 border-[1px] border-border-primary"
+                        >
+                            <div
+                                class="bg-table-title py-[25px] col-span-2 sm:col-span-4 text-[28px] leading-[36px] font-semibold text-center border-b-[1px] border-border-primary"
+                            >
+                                Кафе «Ромашка»
+                            </div>
+                            <div class="col-span-2">
+                                <p
+                                    class="bg-table-subtitle py-[20px] uppercase text-[20px] leading-[20px] font-semibold text-center border-border-primary border-b-[1px] sm:border-r-[1px]"
+                                >
+                                    До
+                                </p>
+                                <ul
+                                    class="list-none border-border-primary sm:border-r-[1px]"
+                                >
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">Отзывов:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__red-text">8</p>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">Рейтинг:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <img
+                                                class="h-[26px]"
+                                                src="/img/cases/stars-left.svg"
+                                                alt="start-left"
+                                            />
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">
+                                            Заявок в месяц:
+                                        </p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__red-text">10</p>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center"
+                                    >
+                                        <p class="col-span-4">Конверсия:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__red-text">0,5%</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-span-2">
+                                <p
+                                    class="bg-table-subtitle py-[20px] uppercase text-[20px] leading-[20px] font-semibold text-center border-border-primary border-b-[1px]"
+                                >
+                                    После
+                                </p>
+                                <ul
+                                    class="list-none border-border-primary sm:border-r-[1px]"
+                                >
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">Отзывов:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__green-text">53</p>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">Рейтинг:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <img
+                                                class="h-[26px]"
+                                                src="/img/cases/stars-right.svg"
+                                                alt="start-left"
+                                            />
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">
+                                            Заявок в месяц:
+                                        </p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__green-text">35</p>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center"
+                                    >
+                                        <p class="col-span-4">Конверсия:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__green-text">
+                                                1,7%
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div
+                            class="grid grid-cols-2 sm:grid-cols-4 border-[1px] border-border-primary"
+                        >
+                            <div
+                                class="bg-table-title py-[25px] col-span-2 sm:col-span-4 text-[28px] leading-[36px] font-semibold text-center border-b-[1px] border-border-primary"
+                            >
+                                Кафе «Ромашка»
+                            </div>
+                            <div class="col-span-2">
+                                <p
+                                    class="bg-table-subtitle py-[20px] uppercase text-[20px] leading-[20px] font-semibold text-center border-border-primary border-b-[1px] sm:border-r-[1px]"
+                                >
+                                    До
+                                </p>
+                                <ul
+                                    class="list-none border-border-primary sm:border-r-[1px]"
+                                >
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">Отзывов:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__red-text">8</p>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">Рейтинг:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <img
+                                                class="h-[26px]"
+                                                src="/img/cases/stars-left.svg"
+                                                alt="start-left"
+                                            />
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">
+                                            Заявок в месяц:
+                                        </p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__red-text">10</p>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center"
+                                    >
+                                        <p class="col-span-4">Конверсия:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__red-text">0,5%</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-span-2">
+                                <p
+                                    class="bg-table-subtitle py-[20px] uppercase text-[20px] leading-[20px] font-semibold text-center border-border-primary border-b-[1px]"
+                                >
+                                    После
+                                </p>
+                                <ul
+                                    class="list-none border-border-primary sm:border-r-[1px]"
+                                >
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">Отзывов:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__green-text">53</p>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">Рейтинг:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <img
+                                                class="h-[26px]"
+                                                src="/img/cases/stars-right.svg"
+                                                alt="start-left"
+                                            />
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary"
+                                    >
+                                        <p class="col-span-4">
+                                            Заявок в месяц:
+                                        </p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__green-text">35</p>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="py-[29px] px-[40px] grid grid-cols-9 items-center"
+                                    >
+                                        <p class="col-span-4">Конверсия:</p>
+                                        <div
+                                            class="flex justify-center col-span-5"
+                                        >
+                                            <p class="cases__green-text">
+                                                1,7%
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-[61px]">
+                        <button
+                            class="pl-[43px] font-semibold text-[18px] text-brand relative before:block before:absolute before:left-0 before:bg-arrow-left before:w-[33px] before:h-[19px] before:bg-contain before:bg-no-repeat before:bg-center before:top-[50%] before:translate-y-[-50%] before:translate-x-[-5px]"
+                            data-owl-prev
+                            data-owl-target=".tableOwl"
+                        >
+                            Back
+                        </button>
+                        <p
+                            class="mx-[30px] text-[18px]"
+                            data-owl-progress
+                            data-owl-name="tableOwl"
+                        ></p>
+                        <button
+                            class="pr-[43px] font-semibold text-[18px] text-brand relative before:block before:absolute before:right-0 before:bg-arrow-right before:w-[33px] before:h-[19px] before:bg-contain before:bg-no-repeat before:bg-center before:top-[50%] before:translate-y-[-50%] before:translate-x-[5px]"
+                            data-owl-next
+                            data-owl-target=".tableOwl"
+                        >
+                            Next
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-[120px] target">
+            <div class="grid grid-cols-12 items-center mb-[60px]">
+                <div
+                    class="col-span-12 sm:col-span-2 text-section-side-title mb-[8px] sm:mb-0"
+                >
+                    Цель
+                </div>
+                <div class="col-span-12 sm:col-span-10">
+                    <h3 class="text-section-main-title">
+                        Почему важно работать с отзывами?
+                    </h3>
+                </div>
+            </div>
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 sm:col-start-3 sm:col-span-10">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-3 lg:gap-[40px] mb-[120px]"
+                    >
+                        <div class="mb-[40px] lg:md-0">
+                            <h3
+                                class="mb-[20px] pb-[32px] border-border-primary border-b-[1px] font-medium text-[74px] leading-[74px] text-brand"
+                            >
+                                20%
+                            </h3>
+                            <p class="text-[22px] leading-[33px]">
+                                Ваших конкурентов заказывают фейковые негативные
+                                отзывы для снижения ваших продаж
+                            </p>
+                        </div>
+                        <div class="mb-[40px] lg:md-0">
+                            <h3
+                                class="mb-[20px] pb-[32px] border-border-primary border-b-[1px] font-medium text-[74px] leading-[74px] text-brand"
+                            >
+                                90%
+                            </h3>
+                            <p class="text-[22px] leading-[33px]">
+                                Потребителей в первую очередь проверяют отзывы
+                                об организации в интернете, для принятия решения
+                            </p>
+                        </div>
+                        <div class="mb-[40px] lg:md-0">
+                            <h3
+                                class="mb-[20px] pb-[32px] border-border-primary border-b-[1px] font-medium text-[74px] leading-[74px] text-brand"
+                            >
+                                35%
+                            </h3>
+                            <p class="text-[22px] leading-[33px]">
+                                Cчитают основным фактором для принятия решения
+                                отзывы о компании
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="p-[40px] sm:p-[60px] bg-card-main relative text-center lg:text-left"
+                    >
+                        <img
+                            class="hidden lg:block absolute right-[15px] top-[50%] translate-y-[-50%] z-[0] h-[80%]"
+                            src="/img/express-audit-illustration.svg"
+                            alt="illustration"
+                        />
+                        <div
+                            class="relative z-[1] lg:max-w-[50%] xl:max-w-[60%]"
+                        >
+                            <h1 class="text-[46px] leading-[55px] mb-[20px]">
+                                Экспресс аудит
+                            </h1>
+                            <p class="mb-[50px] text-[18px] leading-[27px]">
+                                Закажите экспресс-аудит репутации вашего бренда
+                                <b>совершенно бесплатно</b>
+                            </p>
+                            <form
+                                action="#"
+                                method="POST"
+                                name="express-audit-form"
+                            >
+                                <div
+                                    class="flex flex-col xl:flex-row items-center lg:items-start"
+                                >
+                                    <input
+                                        class="mb-[24px] xl:mb-0 max-w-[280px] w-[100%] text-[16px] leading-[25.6px] bg-transparent border-b-[2px] border-border-dark focus:outline-none pb-[12.5px] xl:mr-[32px]"
+                                        placeholder="Домен сайта"
+                                        type="url"
+                                        name="domen"
+                                        id="express-audit-form-domen"
+                                    />
+                                    <input
+                                        class="mb-[24px] xl:mb-0 max-w-[280px] w-[100%] text-[16px] leading-[25.6px] bg-transparent border-b-[2px] border-border-dark focus:outline-none pb-[12.5px] xl:mr-[32px]"
+                                        placeholder="Контактный e-mail"
+                                        type="email"
+                                        name="email"
+                                        id="express-audit-form-email"
+                                    />
+                                    <button
+                                        class="btn-solid text-white"
+                                        type="submit"
+                                    >
+                                        Оставить заявку
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-[120px] strategy bg-card-light">
+            <div class="container">
+                <div class="grid grid-cols-12 items-center mb-[60px]">
+                    <div
+                        class="col-span-12 sm:col-span-2 text-section-side-title mb-[8px] sm:mb-0"
+                    >
+                        Цель
+                    </div>
+                    <div class="col-span-12 sm:col-span-10">
+                        <h3 class="text-section-main-title">
+                            Почему важно работать с отзывами?
+                        </h3>
+                    </div>
+                </div>
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-18 gap-[40px] mb-[76px]"
+                >
+                    <div class="lg:col-span-8">
+                        <img
+                            class="mx-auto"
+                            src="/img/strategy/main-illustration.svg"
+                            alt="illustration"
+                        />
+                    </div>
+                    <div class="lg:col-span-5">
+                        <div
+                            class="mt-[40px] border-border-primary border-[1px] p-[32px]"
+                        >
+                            <div class="flex mb-[24px]">
+                                <div
+                                    class="p-[14px] bg-card-main rounded-[8px]"
+                                >
+                                    <img
+                                        src="/img/strategy/strategy-icon-1.svg"
+                                        alt="Icon 1"
+                                    />
+                                </div>
+                            </div>
+                            <h3 class="text-[24px] leading-[31px] mb-[26px]">
+                                Сопровождение при аудите
+                            </h3>
+                            <p class="font-light text-[16px] leading-[24px]">
+                                Подготовить вашу компанию к прохождению
+                                KYC-процедур (проверка вашей компании банками
+                                и контрагентами перед принятием решения
+                                о сотрудничестве)
+                            </p>
+                        </div>
+                        <div
+                            class="mt-[40px] border-border-primary border-[1px] p-[32px]"
+                        >
+                            <div class="flex mb-[24px]">
+                                <div
+                                    class="p-[14px] bg-card-main rounded-[8px]"
+                                >
+                                    <img
+                                        src="/img/strategy/strategy-icon-2.svg"
+                                        alt="Icon 1"
+                                    />
+                                </div>
+                            </div>
+                            <h3 class="text-[24px] leading-[31px] mb-[26px]">
+                                Позитивный фон
+                            </h3>
+                            <p class="font-light text-[16px] leading-[24px]">
+                                Создавать позитивный контент в отношении вашей
+                                компании на упомянутых выше площадках
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <div
+                            class="border-border-primary border-[1px] p-[32px]"
+                        >
+                            <div class="flex mb-[24px]">
+                                <div
+                                    class="p-[14px] bg-card-main rounded-[8px]"
+                                >
+                                    <img
+                                        src="/img/strategy/strategy-icon-3.svg"
+                                        alt="Icon 1"
+                                    />
+                                </div>
+                            </div>
+                            <h3 class="text-[24px] leading-[31px] mb-[26px]">
+                                Круглосуточный ресерч
+                            </h3>
+                            <p class="font-light text-[16px] leading-[24px]">
+                                Мониторим в режиме онлайн 24/7 упоминания
+                                о вашей компании, бренде, персоне на более
+                                чем 10 000 площадках сети Интернет и оперативно
+                                реагировать на негативные упоминания
+                            </p>
+                        </div>
+                        <div
+                            class="mt-[40px] border-border-primary border-[1px] p-[32px]"
+                        >
+                            <div class="flex mb-[24px]">
+                                <div
+                                    class="p-[14px] bg-card-main rounded-[8px]"
+                                >
+                                    <img
+                                        src="/img/strategy/strategy-icon-4.svg"
+                                        alt="Icon 1"
+                                    />
+                                </div>
+                            </div>
+                            <h3 class="text-[24px] leading-[31px] mb-[26px]">
+                                Работа с негативом
+                            </h3>
+                            <p class="font-light text-[16px] leading-[24px]">
+                                Удалять негативные упоминания из поисковых
+                                систем, социальных сетей, маркетплейсов, карт
+                                и справочников компаний
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <a href="#" class="btn-solid text-white text-center">
+                    Оставить заявку
+                </a>
+            </div>
+        </section>
+        <section class="container py-[120px] examples">
+            <div class="grid grid-cols-12 items-center mb-[60px]">
+                <div
+                    class="col-span-12 sm:col-span-2 text-section-side-title mb-[8px] sm:mb-0"
+                >
+                    Примеры
+                </div>
+                <div class="col-span-12 sm:col-span-10">
+                    <h3 class="text-section-main-title">Как это выглядит?</h3>
+                </div>
+            </div>
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 sm:col-start-3 sm:col-span-10">
+                    <ul
+                        class="list-none flex border-border-primary border-b-[1px] mb-[49px] overflow-x-auto overflow-y-hidden"
+                    >
+                        <li class="pb-[12px] mr-[80px] examples__list-active">
+                            <a href="#">Рестораны</a>
+                        </li>
+                        <li class="pb-[12px] mr-[80px]">
+                            <a href="#">Магазины</a>
+                        </li>
+                        <li class="pb-[12px] mr-[80px]">
+                            <a href="#">Отели</a>
+                        </li>
+                        <li class="pb-[12px] mr-[80px]">
+                            <a href="#">Услуги</a>
+                        </li>
+                        <li class="pb-[12px] mr-[80px]">
+                            <a href="#">Медицина</a>
+                        </li>
+                    </ul>
+                    <div class="max-w-[100%]">
+                        <div class="examples__cards-scroll-wrapper">
+                            <div
+                                class="flex overflow-x-auto overflow-y-visible flex-nowrap examples__cards-scroll pb-[56px]"
+                            >
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-border-primary border-[1px] p-[32px] sm:min-w-[506px] md:min-w-[595px] min-w-[calc(100vw-32px)] w-[595px] mr-[60px] last:mr-[0px]"
+                                >
+                                    <div
+                                        class="grid grid-cols-3 gap-x-[16px] mb-[32px]"
+                                    >
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-1.png"
+                                            alt="Card image 1"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-2.png"
+                                            alt="Card image 2"
+                                        />
+                                        <img
+                                            class="img-fluid"
+                                            src="/img/examples/card-img-3.png"
+                                            alt="Card image 3"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex items-center w-[100%] mb-[16px]"
+                                    >
+                                        <img
+                                            class="mr-[16px]"
+                                            src="/img/examples/card-profile.png"
+                                            alt="profile"
+                                        />
+                                        <div>
+                                            <h5
+                                                class="mb-[6px] text-[16px] leading-[16px] font-semibold"
+                                            >
+                                                Петр Сергеев
+                                            </h5>
+                                            <p
+                                                class="text-[14px] leading-[14px] text-text-grey"
+                                            >
+                                                Знаток города 1 уровень
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[16px] leading-[22.4px] mb-[21px]"
+                                    >
+                                        Очень приятное заведение с аутентичной
+                                        сербской кухней и напитками. Персонал
+                                        тоже сербский. Обслуживание без
+                                        нареканий, достаточно быстрое (правда я
+                                        в тот момент был единственный
+                                        посетитель)…
+                                        <a
+                                            class="text-brand underline"
+                                            href="#"
+                                        >
+                                            Читать полностью
+                                        </a>
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="text-text-grey text-[14px] leading-[14px]"
+                                        >
+                                            07 февраля 2020
+                                        </p>
+                                        <img
+                                            src="/img/examples/stars.svg"
+                                            alt="stars"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-[120px] bg-card-main form">
+            <div
+                class="max-w-[630px] mx-auto bg-white py-[60px] sm:py-[80px] px-[40px] sm:px-[115px]"
+            >
+                <h2
+                    class="mb-[16px] text-center text-[32px] font-semibold leading-[38px]"
+                >
+                    Улучшить репутацию
+                </h2>
+                <p class="text-center text-[16px] leading-[24px] mb-[40px]">
+                    Только наша система способна повышать продажи клиентов за
+                    счет работы с репутацией
                 </p>
-            </div>
-            <div class="flex justify-center items-center flex-col sm:flex-row">
-                <button class="btn-solid my-[10px] sm:my-0 mx-0 sm:mx-[20px]">
+                <div class="mb-[40px]">
+                    <input
+                        class="w-[100%] pb-[12px] border-border-dark border-b-[1px] text-[16px] leading-[25.6px] focus:outline-none"
+                        placeholder="Имя"
+                        type="text"
+                    />
+                </div>
+                <div class="mb-[40px]">
+                    <input
+                        class="w-[100%] pb-[12px] border-border-dark border-b-[1px] text-[16px] leading-[25.6px] focus:outline-none"
+                        placeholder="Компания"
+                        type="text"
+                    />
+                </div>
+                <div class="mb-[40px]">
+                    <input
+                        class="w-[100%] pb-[12px] border-border-dark border-b-[1px] text-[16px] leading-[25.6px] focus:outline-none"
+                        placeholder="Телефон"
+                        type="text"
+                    />
+                </div>
+                <label
+                    class="form__checkbox-container text-[14px] leading-[21px] mb-[40px]"
+                >
+                    I consent to the processing of my personal data in
+                    accordance with the terms of the
+                    <a href="#" class="underline"><b>privacy policy</b></a>
+                    <input type="checkbox" />
+                    <span class="checkmark pt-[10px]"></span>
+                </label>
+                <button class="btn-solid w-[100%] max-w-[100%] text-white">
                     Оставить заявку
                 </button>
-                <button class="btn-outline my-[10px] sm:my-0 mx-0 sm:mx-[20px]">
-                    Каталог услуг
-                </button>
             </div>
-        </div>
-    </section>
-    <section class="container py-[120px] cases">
-        <div class="grid grid-cols-12 items-center mb-[60px]">
-            <div class="col-span-12 sm:col-span-2 text-section-side-title mb-[8px] sm:mb-0">
-                Кейсы
-            </div>   
-            <div class="col-span-12 sm:col-span-10">
-                <h3 class="text-section-main-title">Реальные результаты наших клиентов</h3>
-            </div>
-        </div>
-        <div class="grid grid-cols-12">
-            <div class="col-span-12 sm:col-start-3 sm:col-span-10">
-                <div class="tableOwl owl-carousel owl-theme">
-                    <div class="grid grid-cols-2 sm:grid-cols-4 border-[1px] border-border-primary">
-                        <div class="bg-table-title py-[25px] col-span-2 sm:col-span-4 text-[28px] leading-[36px] font-semibold text-center border-b-[1px] border-border-primary">
-                            Кафе «Ромашка»
-                        </div>
-                        <div class="col-span-2">
-                            <p class="bg-table-subtitle py-[20px] uppercase text-[20px] leading-[20px] font-semibold text-center border-border-primary border-b-[1px] sm:border-r-[1px]">
-                                До
-                            </p>
-                            <ul class="list-none border-border-primary sm:border-r-[1px]">
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Отзывов:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__red-text">8</p>
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Рейтинг:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <img class="h-[26px]" src="/img/cases/stars-left.svg" alt="start-left">
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Заявок в месяц:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__red-text">10</p>
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center">
-                                    <p class="col-span-4">Конверсия:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__red-text">0,5%</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-span-2">
-                            <p class="bg-table-subtitle py-[20px] uppercase text-[20px] leading-[20px] font-semibold text-center border-border-primary border-b-[1px]">После</p>
-                            <ul class="list-none border-border-primary sm:border-r-[1px]">
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Отзывов:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__green-text">53</p>
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Рейтинг:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <img class="h-[26px]" src="/img/cases/stars-right.svg" alt="start-left">
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Заявок в месяц:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__green-text">35</p>
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center">
-                                    <p class="col-span-4">Конверсия:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__green-text">1,7%</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 sm:grid-cols-4 border-[1px] border-border-primary">
-                        <div class="bg-table-title py-[25px] col-span-2 sm:col-span-4 text-[28px] leading-[36px] font-semibold text-center border-b-[1px] border-border-primary">
-                            Кафе «Ромашка»
-                        </div>
-                        <div class="col-span-2">
-                            <p class="bg-table-subtitle py-[20px] uppercase text-[20px] leading-[20px] font-semibold text-center border-border-primary border-b-[1px] sm:border-r-[1px]">
-                                До
-                            </p>
-                            <ul class="list-none border-border-primary sm:border-r-[1px]">
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Отзывов:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__red-text">8</p>
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Рейтинг:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <img class="h-[26px]" src="/img/cases/stars-left.svg" alt="start-left">
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Заявок в месяц:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__red-text">10</p>
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center">
-                                    <p class="col-span-4">Конверсия:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__red-text">0,5%</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-span-2">
-                            <p class="bg-table-subtitle py-[20px] uppercase text-[20px] leading-[20px] font-semibold text-center border-border-primary border-b-[1px]">После</p>
-                            <ul class="list-none border-border-primary sm:border-r-[1px]">
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Отзывов:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__green-text">53</p>
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Рейтинг:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <img class="h-[26px]" src="/img/cases/stars-right.svg" alt="start-left">
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Заявок в месяц:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__green-text">35</p>
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center">
-                                    <p class="col-span-4">Конверсия:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__green-text">1,7%</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 sm:grid-cols-4 border-[1px] border-border-primary">
-                        <div class="bg-table-title py-[25px] col-span-2 sm:col-span-4 text-[28px] leading-[36px] font-semibold text-center border-b-[1px] border-border-primary">
-                            Кафе «Ромашка»
-                        </div>
-                        <div class="col-span-2">
-                            <p class="bg-table-subtitle py-[20px] uppercase text-[20px] leading-[20px] font-semibold text-center border-border-primary border-b-[1px] sm:border-r-[1px]">
-                                До
-                            </p>
-                            <ul class="list-none border-border-primary sm:border-r-[1px]">
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Отзывов:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__red-text">8</p>
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Рейтинг:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <img class="h-[26px]" src="/img/cases/stars-left.svg" alt="start-left">
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Заявок в месяц:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__red-text">10</p>
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center">
-                                    <p class="col-span-4">Конверсия:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__red-text">0,5%</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-span-2">
-                            <p class="bg-table-subtitle py-[20px] uppercase text-[20px] leading-[20px] font-semibold text-center border-border-primary border-b-[1px]">После</p>
-                            <ul class="list-none border-border-primary sm:border-r-[1px]">
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Отзывов:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__green-text">53</p>
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Рейтинг:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <img class="h-[26px]" src="/img/cases/stars-right.svg" alt="start-left">
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center border-b-[1px] border-border-primary ">
-                                    <p class="col-span-4">Заявок в месяц:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__green-text">35</p>
-                                    </div>
-                                </li>
-                                <li class="py-[29px] px-[40px] grid grid-cols-9 items-center">
-                                    <p class="col-span-4">Конверсия:</p>
-                                    <div class="flex justify-center col-span-5">
-                                        <p class="cases__green-text">1,7%</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-center mt-[61px]">
-                    <button class="pl-[43px] font-semibold text-[18px] text-brand relative before:block before:absolute before:left-0 before:bg-arrow-left before:w-[33px] before:h-[19px] before:bg-contain before:bg-no-repeat before:bg-center before:top-[50%] before:translate-y-[-50%] before:translate-x-[-5px]" data-owl-prev data-owl-target=".tableOwl">Back</button>
-                    <p class="mx-[30px] text-[18px]" data-owl-progress data-owl-name="tableOwl"></p>
-                    <button class="pr-[43px] font-semibold text-[18px] text-brand relative before:block before:absolute before:right-0 before:bg-arrow-right before:w-[33px] before:h-[19px] before:bg-contain before:bg-no-repeat before:bg-center before:top-[50%] before:translate-y-[-50%] before:translate-x-[5px]" data-owl-next data-owl-target=".tableOwl">Next</button>
-                </div>
-                    
-            </div>
-        </div>
-    </section>
-    
-    <section class="container py-[120px] target">
-        <div class="grid grid-cols-12 items-center mb-[60px]">
-            <div class="col-span-12 sm:col-span-2 text-section-side-title mb-[8px] sm:mb-0">
-                Цель
-            </div>   
-            <div class="col-span-12 sm:col-span-10">
-                <h3 class="text-section-main-title">
-                    Почему важно работать с отзывами?
-                </h3>
-            </div>
-        </div>
-        <div class="grid grid-cols-12">
-            <div class="col-span-12 sm:col-start-3 sm:col-span-10">
-                <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-[40px] mb-[120px]">
-                    <div class="mb-[40px] lg:md-0">
-                        <h3 class="mb-[53px] font-medium text-[74px] leading-[74px] text-brand">20%</h3>
-                        <p class="text-[22px] leading-[33px]">
-                            Ваших конкурентов заказывают фейковые негативные отзывы для снижения ваших продаж
-                        </p>
-                    </div>
-                    <div class="mb-[40px] lg:md-0">
-                        <h3 class="mb-[53px] font-medium text-[74px] leading-[74px] text-brand">90%</h3>
-                        <p class="text-[22px] leading-[33px]">
-                            Потребителей в первую очередь проверяют отзывы об организации в интернете, для принятия решения
-                        </p>
-                    </div>
-                    <div class="mb-[40px] lg:md-0">
-                        <h3 class="mb-[53px] font-medium text-[74px] leading-[74px] text-brand">35%</h3>
-                        <p class="text-[22px] leading-[33px]">
-                            Cчитают основным фактором для принятия решения отзывы о компании
-                        </p>
-                    </div>
-                </div>
-                <div class="p-[60px] bg-card-main relative">
-                    <img class="absolute right-0 top-[10px] bottom-[10px] z-[0] h-auto" src="/img/express-audit-illustration.svg" alt="illustration">
-                    <div class="relative z-[1]">
-                        <h1 class="text-[46px] leading-[55px] mb-[20px]">
-                            Экспресс аудит
-                        </h1>
-                        <p class="mb-[50px] max-w-[60%]">
-                            Закажите экспресс-аудит репутации вашего бренда <b>совершенно бесплатно</b>
-                        </p>
-                        <form action="#" method="POST" name="express-audit-form">
-                            <div class="flex flex-col xl:flex-row">
-                                <input class="mb-[24px] xl:mb-0 max-w-[280px] w-[100%] text-[16px] leading-[25.6px] bg-transparent border-b-[2px] border-border-dark focus:outline-none pb-[12.5px] xl:mr-[32px]" placeholder="Домен сайта" type="url" name="domen" id="express-audit-form-domen">
-                                <input class="mb-[24px] xl:mb-0 max-w-[280px] w-[100%] text-[16px] leading-[25.6px] bg-transparent border-b-[2px] border-border-dark focus:outline-none pb-[12.5px] xl:mr-[32px]" placeholder="Контактный e-mail" type="email" name="email" id="express-audit-form-email">
-                                <button class="btn-solid text-white" type="submit">Оставить заявку</button>
-    
-                            </div>
-                        </form>
-                    </div>
-                </div>         
-            </div>
-        </div>
-    </section>
-    <section class="py-[120px] strategy bg-card-light">
-        <div class="container">
-            
-
-            <div class="grid grid-cols-12 items-center mb-[60px]">
-                <div class="col-span-12 sm:col-span-2 text-section-side-title mb-[8px] sm:mb-0">
-                    Цель
-                </div>   
-            <div class="col-span-12 sm:col-span-10">
-                <h3 class="text-section-main-title">
-                    Почему важно работать с отзывами?
-                </h3>
-            </div>
-        </div>
-        <div class="grid grid-cols-18 gap-[40px] mb-[76px]">
-            <div class="col-span-8">
-                <img src="/img/strategy/main-illustration.svg" alt="illustration">
-            </div>
-            <div class="col-span-5">
-                <div class="mt-[40px] border-border-primary border-[1px] p-[32px]">
-                    <div class="flex mb-[24px]">
-                        <div class="p-[14px] bg-card-main rounded-[8px]">
-                            <img src="/img/strategy/strategy-icon-1.svg" alt="Icon 1">
-                        </div>
-                    </div>
-                    <h3 class="text-[24px] leading-[31px] mb-[26px]">
-                        Сопровождение при аудите
-                    </h3>
-                    <p class="font-light text-[16px] leading-[24px]">
-                        Подготовить вашу компанию к прохождению KYC-процедур (проверка вашей компании банками и контрагентами перед принятием решения о сотрудничестве)
-                    </p>
-                </div>
-                <div class="mt-[40px] border-border-primary border-[1px] p-[32px]">
-                    <div class="flex mb-[24px]">
-                        <div class="p-[14px] bg-card-main rounded-[8px]">
-
-                            <img src="/img/strategy/strategy-icon-2.svg" alt="Icon 1">
-                        </div>
-                    </div>
-                    <h3 class="text-[24px] leading-[31px] mb-[26px]">
-                        Позитивный фон
-                    </h3>
-                    <p class="font-light text-[16px] leading-[24px]">
-                        Создавать позитивный контент в отношении вашей компании на упомянутых выше площадках
-                    </p>
-                </div>
-            </div>
-            <div class="col-span-5">
-                <div class="border-border-primary border-[1px] p-[32px]">
-                    <div class="flex mb-[24px]">
-                        <div class="p-[14px] bg-card-main rounded-[8px]">
-
-                            <img src="/img/strategy/strategy-icon-3.svg" alt="Icon 1">
-                        </div>
-                    </div>
-                    <h3 class="text-[24px] leading-[31px] mb-[26px]">
-                        Круглосуточный ресерч
-                    </h3>
-                    <p class="font-light text-[16px] leading-[24px]">
-                        Мониторим в режиме онлайн 24/7 упоминания о вашей компании, бренде, персоне на более чем 10 000 площадках сети Интернет и оперативно реагировать на негативные упоминания
-                    </p>
-                </div>
-                <div class="mt-[40px] border-border-primary border-[1px] p-[32px]">
-                    <div class="flex mb-[24px]">
-                        <div class="p-[14px] bg-card-main rounded-[8px]">
-
-                            <img src="/img/strategy/strategy-icon-4.svg" alt="Icon 1">
-                        </div>
-                    </div>
-                    <h3 class="text-[24px] leading-[31px] mb-[26px]">
-                        Работа с негативом
-                    </h3>
-                    <p class="font-light text-[16px] leading-[24px]">
-                        Удалять негативные упоминания из поисковых систем, социальных сетей, маркетплейсов, карт и справочников компаний
-                    </p>
-                </div>
-            </div>
-
-            </div>
-        </div>
-        <div class="flex justify-center">
-            <a href="#" class="btn-solid text-white text-center">
-                Оставить заявку
-            </a>
-        </div>
         </section>
-    <section class="container py-[120px] examples">
-        <div class="grid grid-cols-12 items-center mb-[60px]">
-            <div class="col-span-12 sm:col-span-2 text-section-side-title mb-[8px] sm:mb-0">
-                Примеры
-            </div>   
-            <div class="col-span-12 sm:col-span-10">
-                <h3 class="text-section-main-title">
-                    Как это выглядит?
-                </h3>
-            </div>
-        </div>
-        <div class="grid grid-cols-12">
-            <div class="col-span-12 sm:col-start-3 sm:col-span-10">
-                <ul class="list-none flex border-border-primary border-b-[1px] mb-[49px]">
-                    <li class="pb-[12px] mr-[80px] examples__list-active">
-                        <a href="#">Рестораны</a>
-                    </li>
-                    <li class="pb-[12px] mr-[80px]">
-                        <a href="#">Магазины</a>
-                    </li>
-                    <li class="pb-[12px] mr-[80px]">
-                        <a href="#">Отели</a>
-                    </li>
-                    <li class="pb-[12px] mr-[80px]">
-                        <a href="#">Услуги</a>
-                    </li>
-                    <li class="pb-[12px] mr-[80px]">
-                        <a href="#">Медицина</a>
-                    </li>
-                </ul>
-                <div class="max-w-[100%]">
-                    <div class="examples__cards-scroll-wrapper">
-                        <div class="flex overflow-x-auto overflow-y-visible flex-nowrap examples__cards-scroll pb-[56px]">
-                            <div class="border-border-primary border-[1px] p-[32px] min-w-[595px] w-[595px] mr-[60px] last:mr-[0px]">
-                                <div class="grid grid-cols-3 gap-x-[16px] mb-[32px]">
-                                    <img class="img-fluid" src="/img/examples/card-img-1.png" alt="Card image 1">
-                                    <img class="img-fluid" src="/img/examples/card-img-2.png" alt="Card image 2">
-                                    <img class="img-fluid" src="/img/examples/card-img-3.png" alt="Card image 3">
-                                </div>
-                                <div class="flex items-center w-[100%] mb-[16px]">
-                                    <img class="mr-[16px]" src="/img/examples/card-profile.png" alt="profile">
-                                    <div>
-                                        <h5 class="mb-[6px] text-[16px] leading-[16px] font-semibold">Петр Сергеев</h5>
-                                        <p class="text-[14px] leading-[14px] text-text-grey">Знаток города 1 уровень</p>
-                                    </div>
-                                </div>
-                                <p class="text-[16px] leading-[22.4px] mb-[21px]">
-                                    Очень приятное заведение с аутентичной сербской кухней и напитками. Персонал тоже сербский. Обслуживание без нареканий, достаточно быстрое (правда я в тот момент был единственный посетитель)… 
-                                    <a class="text-brand underline" href="#">Читать полностью</a>
-                                </p>
-                                <div class="flex justify-between">
-                                    <p class="text-text-grey text-[14px] leading-[14px]">07 февраля 2020</p>
-                                    <img src="/img/examples/stars.svg" alt="stars">
-                                </div>
-                            </div>
-                            <div class="border-border-primary border-[1px] p-[32px] min-w-[595px] w-[595px] mr-[60px] last:mr-[0px]">
-                                <div class="grid grid-cols-3 gap-x-[16px] mb-[32px]">
-                                    <img class="img-fluid" src="/img/examples/card-img-1.png" alt="Card image 1">
-                                    <img class="img-fluid" src="/img/examples/card-img-2.png" alt="Card image 2">
-                                    <img class="img-fluid" src="/img/examples/card-img-3.png" alt="Card image 3">
-                                </div>
-                                <div class="flex items-center w-[100%] mb-[16px]">
-                                    <img class="mr-[16px]" src="/img/examples/card-profile.png" alt="profile">
-                                    <div>
-                                        <h5 class="mb-[6px] text-[16px] leading-[16px] font-semibold">Петр Сергеев</h5>
-                                        <p class="text-[14px] leading-[14px] text-text-grey">Знаток города 1 уровень</p>
-                                    </div>
-                                </div>
-                                <p class="text-[16px] leading-[22.4px] mb-[21px]">
-                                    Очень приятное заведение с аутентичной сербской кухней и напитками. Персонал тоже сербский. Обслуживание без нареканий, достаточно быстрое (правда я в тот момент был единственный посетитель)… 
-                                    <a class="text-brand underline" href="#">Читать полностью</a>
-                                </p>
-                                <div class="flex justify-between">
-                                    <p class="text-text-grey text-[14px] leading-[14px]">07 февраля 2020</p>
-                                    <img src="/img/examples/stars.svg" alt="stars">
-                                </div>
-                            </div>
-                            <div class="border-border-primary border-[1px] p-[32px] min-w-[595px] w-[595px] mr-[60px] last:mr-[0px]">
-                                <div class="grid grid-cols-3 gap-x-[16px] mb-[32px]">
-                                    <img class="img-fluid" src="/img/examples/card-img-1.png" alt="Card image 1">
-                                    <img class="img-fluid" src="/img/examples/card-img-2.png" alt="Card image 2">
-                                    <img class="img-fluid" src="/img/examples/card-img-3.png" alt="Card image 3">
-                                </div>
-                                <div class="flex items-center w-[100%] mb-[16px]">
-                                    <img class="mr-[16px]" src="/img/examples/card-profile.png" alt="profile">
-                                    <div>
-                                        <h5 class="mb-[6px] text-[16px] leading-[16px] font-semibold">Петр Сергеев</h5>
-                                        <p class="text-[14px] leading-[14px] text-text-grey">Знаток города 1 уровень</p>
-                                    </div>
-                                </div>
-                                <p class="text-[16px] leading-[22.4px] mb-[21px]">
-                                    Очень приятное заведение с аутентичной сербской кухней и напитками. Персонал тоже сербский. Обслуживание без нареканий, достаточно быстрое (правда я в тот момент был единственный посетитель)… 
-                                    <a class="text-brand underline" href="#">Читать полностью</a>
-                                </p>
-                                <div class="flex justify-between">
-                                    <p class="text-text-grey text-[14px] leading-[14px]">07 февраля 2020</p>
-                                    <img src="/img/examples/stars.svg" alt="stars">
-                                </div>
-                            </div>
-                            <div class="border-border-primary border-[1px] p-[32px] min-w-[595px] w-[595px] mr-[60px] last:mr-[0px]">
-                                <div class="grid grid-cols-3 gap-x-[16px] mb-[32px]">
-                                    <img class="img-fluid" src="/img/examples/card-img-1.png" alt="Card image 1">
-                                    <img class="img-fluid" src="/img/examples/card-img-2.png" alt="Card image 2">
-                                    <img class="img-fluid" src="/img/examples/card-img-3.png" alt="Card image 3">
-                                </div>
-                                <div class="flex items-center w-[100%] mb-[16px]">
-                                    <img class="mr-[16px]" src="/img/examples/card-profile.png" alt="profile">
-                                    <div>
-                                        <h5 class="mb-[6px] text-[16px] leading-[16px] font-semibold">Петр Сергеев</h5>
-                                        <p class="text-[14px] leading-[14px] text-text-grey">Знаток города 1 уровень</p>
-                                    </div>
-                                </div>
-                                <p class="text-[16px] leading-[22.4px] mb-[21px]">
-                                    Очень приятное заведение с аутентичной сербской кухней и напитками. Персонал тоже сербский. Обслуживание без нареканий, достаточно быстрое (правда я в тот момент был единственный посетитель)… 
-                                    <a class="text-brand underline" href="#">Читать полностью</a>
-                                </p>
-                                <div class="flex justify-between">
-                                    <p class="text-text-grey text-[14px] leading-[14px]">07 февраля 2020</p>
-                                    <img src="/img/examples/stars.svg" alt="stars">
-                                </div>
-                            </div>
-                            <div class="border-border-primary border-[1px] p-[32px] min-w-[595px] w-[595px] mr-[60px] last:mr-[0px]">
-                                <div class="grid grid-cols-3 gap-x-[16px] mb-[32px]">
-                                    <img class="img-fluid" src="/img/examples/card-img-1.png" alt="Card image 1">
-                                    <img class="img-fluid" src="/img/examples/card-img-2.png" alt="Card image 2">
-                                    <img class="img-fluid" src="/img/examples/card-img-3.png" alt="Card image 3">
-                                </div>
-                                <div class="flex items-center w-[100%] mb-[16px]">
-                                    <img class="mr-[16px]" src="/img/examples/card-profile.png" alt="profile">
-                                    <div>
-                                        <h5 class="mb-[6px] text-[16px] leading-[16px] font-semibold">Петр Сергеев</h5>
-                                        <p class="text-[14px] leading-[14px] text-text-grey">Знаток города 1 уровень</p>
-                                    </div>
-                                </div>
-                                <p class="text-[16px] leading-[22.4px] mb-[21px]">
-                                    Очень приятное заведение с аутентичной сербской кухней и напитками. Персонал тоже сербский. Обслуживание без нареканий, достаточно быстрое (правда я в тот момент был единственный посетитель)… 
-                                    <a class="text-brand underline" href="#">Читать полностью</a>
-                                </p>
-                                <div class="flex justify-between">
-                                    <p class="text-text-grey text-[14px] leading-[14px]">07 февраля 2020</p>
-                                    <img src="/img/examples/stars.svg" alt="stars">
-                                </div>
-                            </div>
-                            <div class="border-border-primary border-[1px] p-[32px] min-w-[595px] w-[595px] mr-[60px] last:mr-[0px]">
-                                <div class="grid grid-cols-3 gap-x-[16px] mb-[32px]">
-                                    <img class="img-fluid" src="/img/examples/card-img-1.png" alt="Card image 1">
-                                    <img class="img-fluid" src="/img/examples/card-img-2.png" alt="Card image 2">
-                                    <img class="img-fluid" src="/img/examples/card-img-3.png" alt="Card image 3">
-                                </div>
-                                <div class="flex items-center w-[100%] mb-[16px]">
-                                    <img class="mr-[16px]" src="/img/examples/card-profile.png" alt="profile">
-                                    <div>
-                                        <h5 class="mb-[6px] text-[16px] leading-[16px] font-semibold">Петр Сергеев</h5>
-                                        <p class="text-[14px] leading-[14px] text-text-grey">Знаток города 1 уровень</p>
-                                    </div>
-                                </div>
-                                <p class="text-[16px] leading-[22.4px] mb-[21px]">
-                                    Очень приятное заведение с аутентичной сербской кухней и напитками. Персонал тоже сербский. Обслуживание без нареканий, достаточно быстрое (правда я в тот момент был единственный посетитель)… 
-                                    <a class="text-brand underline" href="#">Читать полностью</a>
-                                </p>
-                                <div class="flex justify-between">
-                                    <p class="text-text-grey text-[14px] leading-[14px]">07 февраля 2020</p>
-                                    <img src="/img/examples/stars.svg" alt="stars">
-                                </div>
-                            </div>
-                            <div class="border-border-primary border-[1px] p-[32px] min-w-[595px] w-[595px] mr-[60px] last:mr-[0px]">
-                                <div class="grid grid-cols-3 gap-x-[16px] mb-[32px]">
-                                    <img class="img-fluid" src="/img/examples/card-img-1.png" alt="Card image 1">
-                                    <img class="img-fluid" src="/img/examples/card-img-2.png" alt="Card image 2">
-                                    <img class="img-fluid" src="/img/examples/card-img-3.png" alt="Card image 3">
-                                </div>
-                                <div class="flex items-center w-[100%] mb-[16px]">
-                                    <img class="mr-[16px]" src="/img/examples/card-profile.png" alt="profile">
-                                    <div>
-                                        <h5 class="mb-[6px] text-[16px] leading-[16px] font-semibold">Петр Сергеев</h5>
-                                        <p class="text-[14px] leading-[14px] text-text-grey">Знаток города 1 уровень</p>
-                                    </div>
-                                </div>
-                                <p class="text-[16px] leading-[22.4px] mb-[21px]">
-                                    Очень приятное заведение с аутентичной сербской кухней и напитками. Персонал тоже сербский. Обслуживание без нареканий, достаточно быстрое (правда я в тот момент был единственный посетитель)… 
-                                    <a class="text-brand underline" href="#">Читать полностью</a>
-                                </p>
-                                <div class="flex justify-between">
-                                    <p class="text-text-grey text-[14px] leading-[14px]">07 февраля 2020</p>
-                                    <img src="/img/examples/stars.svg" alt="stars">
-                                </div>
-                            </div>
-                            <div class="border-border-primary border-[1px] p-[32px] min-w-[595px] w-[595px] mr-[60px] last:mr-[0px]">
-                                <div class="grid grid-cols-3 gap-x-[16px] mb-[32px]">
-                                    <img class="img-fluid" src="/img/examples/card-img-1.png" alt="Card image 1">
-                                    <img class="img-fluid" src="/img/examples/card-img-2.png" alt="Card image 2">
-                                    <img class="img-fluid" src="/img/examples/card-img-3.png" alt="Card image 3">
-                                </div>
-                                <div class="flex items-center w-[100%] mb-[16px]">
-                                    <img class="mr-[16px]" src="/img/examples/card-profile.png" alt="profile">
-                                    <div>
-                                        <h5 class="mb-[6px] text-[16px] leading-[16px] font-semibold">Петр Сергеев</h5>
-                                        <p class="text-[14px] leading-[14px] text-text-grey">Знаток города 1 уровень</p>
-                                    </div>
-                                </div>
-                                <p class="text-[16px] leading-[22.4px] mb-[21px]">
-                                    Очень приятное заведение с аутентичной сербской кухней и напитками. Персонал тоже сербский. Обслуживание без нареканий, достаточно быстрое (правда я в тот момент был единственный посетитель)… 
-                                    <a class="text-brand underline" href="#">Читать полностью</a>
-                                </p>
-                                <div class="flex justify-between">
-                                    <p class="text-text-grey text-[14px] leading-[14px]">07 февраля 2020</p>
-                                    <img src="/img/examples/stars.svg" alt="stars">
-                                </div>
-                            </div>
-                            <div class="border-border-primary border-[1px] p-[32px] min-w-[595px] w-[595px] mr-[60px] last:mr-[0px]">
-                                <div class="grid grid-cols-3 gap-x-[16px] mb-[32px]">
-                                    <img class="img-fluid" src="/img/examples/card-img-1.png" alt="Card image 1">
-                                    <img class="img-fluid" src="/img/examples/card-img-2.png" alt="Card image 2">
-                                    <img class="img-fluid" src="/img/examples/card-img-3.png" alt="Card image 3">
-                                </div>
-                                <div class="flex items-center w-[100%] mb-[16px]">
-                                    <img class="mr-[16px]" src="/img/examples/card-profile.png" alt="profile">
-                                    <div>
-                                        <h5 class="mb-[6px] text-[16px] leading-[16px] font-semibold">Петр Сергеев</h5>
-                                        <p class="text-[14px] leading-[14px] text-text-grey">Знаток города 1 уровень</p>
-                                    </div>
-                                </div>
-                                <p class="text-[16px] leading-[22.4px] mb-[21px]">
-                                    Очень приятное заведение с аутентичной сербской кухней и напитками. Персонал тоже сербский. Обслуживание без нареканий, достаточно быстрое (правда я в тот момент был единственный посетитель)… 
-                                    <a class="text-brand underline" href="#">Читать полностью</a>
-                                </p>
-                                <div class="flex justify-between">
-                                    <p class="text-text-grey text-[14px] leading-[14px]">07 февраля 2020</p>
-                                    <img src="/img/examples/stars.svg" alt="stars">
-                                </div>
-                            </div>
-                            <div class="border-border-primary border-[1px] p-[32px] min-w-[595px] w-[595px] mr-[60px] last:mr-[0px]">
-                                <div class="grid grid-cols-3 gap-x-[16px] mb-[32px]">
-                                    <img class="img-fluid" src="/img/examples/card-img-1.png" alt="Card image 1">
-                                    <img class="img-fluid" src="/img/examples/card-img-2.png" alt="Card image 2">
-                                    <img class="img-fluid" src="/img/examples/card-img-3.png" alt="Card image 3">
-                                </div>
-                                <div class="flex items-center w-[100%] mb-[16px]">
-                                    <img class="mr-[16px]" src="/img/examples/card-profile.png" alt="profile">
-                                    <div>
-                                        <h5 class="mb-[6px] text-[16px] leading-[16px] font-semibold">Петр Сергеев</h5>
-                                        <p class="text-[14px] leading-[14px] text-text-grey">Знаток города 1 уровень</p>
-                                    </div>
-                                </div>
-                                <p class="text-[16px] leading-[22.4px] mb-[21px]">
-                                    Очень приятное заведение с аутентичной сербской кухней и напитками. Персонал тоже сербский. Обслуживание без нареканий, достаточно быстрое (правда я в тот момент был единственный посетитель)… 
-                                    <a class="text-brand underline" href="#">Читать полностью</a>
-                                </p>
-                                <div class="flex justify-between">
-                                    <p class="text-text-grey text-[14px] leading-[14px]">07 февраля 2020</p>
-                                    <img src="/img/examples/stars.svg" alt="stars">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="container">
-            
-        </div>
-    </footer>
-    <section class="py-[120px] form bg-card-main">
-        <div class="container">
+        <footer class="footer">
+            <div class="container"></div>
+        </footer>
 
-        </div>
-    </section>
-    <script src="./js/scripts.js"></script>
-</body>
-
+        <script src="./js/scripts.js"></script>
+    </body>
 </html>
