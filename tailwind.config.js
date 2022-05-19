@@ -10,13 +10,19 @@ module.exports = {
             padding: '1rem'
         },
         extend: {
+            gridTemplateColumns: {
+                '18': 'repeat(18, minmax(0, 1fr))'
+            },
             fontFamily: {
                 rubik: ['Rubik', 'sans-serif'],
                 museo: ['Museo', 'sans-serif'],
             },
             colors: {
                 brand: '#FFB000',
-                card: '#F5F2EA',
+                card: {
+                    main: '#F5F2EA',
+                    light: '#FCFCFC'
+                },
                 text: {
                     dark: '#1E1E1E',
                     grey: '#BFBFBF', 
