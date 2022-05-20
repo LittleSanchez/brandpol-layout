@@ -11,6 +11,6 @@
             @apply uppercase text-[18px] leading-[21.6px] text-text-dark
         }
         &-section-main-title {
-            @apply font-medium text-[32px] leading-[44.8px]
+            @apply text-[32px] leading-[44.8px] font-semibold
         }
     }

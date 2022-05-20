@@ -2,6 +2,12 @@
 
 @layer base {
     .form {
+        &.dark * {
+            --lines: white;
+        }
+        &.light * {
+            --lines: black;
+        }
         &__checkbox-container {
             display: block;
             position: relative;
@@ -22,7 +28,7 @@
 
             &:hover input ~ .checkmark {
                 background-color: transparent;
-                border: 1px solid black;
+                border: 1px solid var(--lines);
             }
             & input:checked ~ .checkmark {
                 background-color: transparent;
@@ -40,26 +46,27 @@
             width: 30%;
             height: auto;
             margin: auto auto;
-            border: solid black;
+            border: solid var(--lines);
             border-width: 0 1px 1px 0;
             -webkit-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             transform: rotate(45deg);
         }
 
-        .checkmark {
-            position: absolute;
-            top: 3px;
-            left: 0;
-            height: 16px;
-            width: 16px;
-            background-color: #eee;
-            border: 1px solid black;
-        }
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-        }
+    }
+    
+    .checkmark {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        background-color: transparent;
+        border: 1px solid var(--lines);
+    }
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
     }
 }

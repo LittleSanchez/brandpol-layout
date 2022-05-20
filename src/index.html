@@ -4,41 +4,79 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Gulp with TailwindCSS</title>
+        <title>Brandpol</title>
         <link rel="stylesheet" type="text/css" href="./css/style.css" />
     </head>
 
     <body class="text-text-dark leading-[100%] box-border font-museo">
         <section id="header" class="text-white">
-            <div class="p-0 m-0 w-[100%] bg-header-cover bg-cover min-h-screen">
+            <div
+                class="p-0 m-0 w-[100%] bg-header-cover bg-cover min-h-screen pb-[40px]"
+            >
                 <div class="container">
                     <div
                         id="navbar"
-                        class="grid grid-cols-3 md:grid-cols-3 items-center py-[20px] lg:py-[10px] mb-[174px]"
+                        class="flex justify-between items-center py-[32.5px] mb-[174px] relative"
                     >
-                        <div class="flex flex-wrap col-span-2 md:col-span-1 mb-[20px] md:mb-0">
-                            <a class="mr-[40px] lg:mr-[73px] mb-0 flex items-center text-[18px] leading-[18px] uppercase" href="#">
-                                <img class="mr-[20px]" src="/img/navbar/burger.svg" alt="">
-                                <span>Menu</span>
+                        <div
+                            class="absolute mx-auto top-[15px] sm:top-[10px] left-0 right-0"
+                        >
+                            <img
+                                src="/img/logo.svg"
+                                class="h-[60px] sm:h-[80px] mx-auto"
+                                alt="logo"
+                            />
+                        </div>
+                        <div
+                            class="flex flex-wrap relative z-[5] px-[10px] sm:px-0 justify-between sm:justify-start w-[100%] sm:w-auto"
+                        >
+                            <a
+                                class="mr-[40px] lg:mr-[73px] mb-0 flex items-center text-[18px] leading-[18px] uppercase"
+                                href="#"
+                            >
+                                <img
+                                    class="mr-[20px]"
+                                    src="/img/navbar/burger.svg"
+                                    alt=""
+                                />
+                                <span class="hidden sm:block">Menu</span>
                             </a>
-                            <a class="flex items-center text-[18px] leading-[18px] uppercase" href="#">
-                                <img class="mr-[20px] " src="/img/navbar/global.svg" alt="">
-                                <span class="mr-[8px] ">en</span>
-                                <img src="/img/navbar/global-right-arrow.svg" alt="">
+                            <a
+                                class="flex items-center text-[18px] leading-[18px] uppercase"
+                                href="#"
+                            >
+                                <img
+                                    class="mr-[20px]"
+                                    src="/img/navbar/global.svg"
+                                    alt=""
+                                />
+                                <span class="mr-[8px] hidden sm:block">en</span>
+                                <img
+                                    src="/img/navbar/global-right-arrow.svg"
+                                    alt=""
+                                />
                             </a>
+                        </div>
 
-                        </div>
-                        <div class="flex justify-end md:justify-center row-span-2 md:row-span-1">
-                            <img src="/img/logo.svg" class="h-[80px]" alt="logo" />
-                        </div>
-                        <div class="flex flex-wrap flex-row md:flex-row-reverse items-center col-span-2 md:col-span-1" >
-                            <a class="text-[18px] leading-[18px] underline ml-0 mr-[50px] md:mr-0 md:ml-[50px] xl:ml-[74px] mb-0" href="#">Get in touch</a>
+                        <div
+                            class="flex-wrap relative z-[5] flex-row md:flex-row-reverse items-center hidden sm:flex"
+                        >
+                            <a
+                                class="text-[18px] leading-[18px] underline mr-[50px] md:mr-0 md:ml-[50px] xl:ml-[74px] mb-0"
+                                href="#"
+                            >
+                                Get in touch
+                            </a>
                             <div class="flex">
                                 <a href="#">
-                                    <img src="/img/navbar/youtube.svg" alt="">
+                                    <img src="/img/navbar/youtube.svg" alt="" />
                                 </a>
                                 <a href="#">
-                                    <img class="ml-[20px]" src="/img/navbar/facebook.svg" alt="">
+                                    <img
+                                        class="ml-[20px]"
+                                        src="/img/navbar/facebook.svg"
+                                        alt=""
+                                    />
                                 </a>
                             </div>
                         </div>
@@ -519,7 +557,7 @@
                             >
                                 20%
                             </h3>
-                            <p class="text-[22px] leading-[33px]">
+                            <p class="text-[22px] leading-[33px] font-medium">
                                 Ваших конкурентов заказывают фейковые негативные
                                 отзывы для снижения ваших продаж
                             </p>
@@ -530,7 +568,7 @@
                             >
                                 90%
                             </h3>
-                            <p class="text-[22px] leading-[33px]">
+                            <p class="text-[22px] leading-[33px] font-medium">
                                 Потребителей в первую очередь проверяют отзывы
                                 об организации в интернете, для принятия решения
                             </p>
@@ -541,7 +579,7 @@
                             >
                                 35%
                             </h3>
-                            <p class="text-[22px] leading-[33px]">
+                            <p class="text-[22px] leading-[33px] font-medium">
                                 Cчитают основным фактором для принятия решения
                                 отзывы о компании
                             </p>
@@ -551,7 +589,7 @@
                         class="p-[40px] sm:p-[60px] bg-card-main relative text-center lg:text-left"
                     >
                         <img
-                            class="hidden lg:block absolute right-[15px] top-[50%] translate-y-[-50%] z-[0] h-[80%]"
+                            class="hidden lg:block absolute right-[15px] top-[50%] translate-y-[-50%] z-[0] lg:h-[60%] xl:h-[80%]"
                             src="/img/express-audit-illustration.svg"
                             alt="illustration"
                         />
@@ -571,29 +609,40 @@
                                 name="express-audit-form"
                             >
                                 <div
-                                    class="flex flex-col xl:flex-row items-center lg:items-start"
+                                    class="flex flex-col xl:flex-row items-center lg:items-start xl:items-end xl:mb-[26px]"
                                 >
                                     <input
-                                        class="mb-[24px] xl:mb-0 max-w-[280px] w-[100%] text-[16px] leading-[25.6px] bg-transparent border-b-[2px] border-border-dark focus:outline-none pb-[12.5px] xl:mr-[32px]"
+                                        class="mb-[24px] xl:mb-0 max-w-[280px] w-[100%] text-[16px] leading-[25.6px] bg-transparent border-b-[2px] border-border-dark rounded-none focus:outline-none pb-[12.5px] xl:mr-[32px]"
                                         placeholder="Домен сайта"
                                         type="url"
                                         name="domen"
                                         id="express-audit-form-domen"
                                     />
                                     <input
-                                        class="mb-[24px] xl:mb-0 max-w-[280px] w-[100%] text-[16px] leading-[25.6px] bg-transparent border-b-[2px] border-border-dark focus:outline-none pb-[12.5px] xl:mr-[32px]"
+                                        class="mb-[24px] xl:mb-0 max-w-[280px] w-[100%] text-[16px] leading-[25.6px] bg-transparent border-b-[2px] border-border-dark rounded-none focus:outline-none pb-[12.5px] xl:mr-[32px]"
                                         placeholder="Контактный e-mail"
                                         type="email"
                                         name="email"
                                         id="express-audit-form-email"
                                     />
                                     <button
-                                        class="btn-solid text-white"
+                                        class="btn-solid text-white py-[16px] px-[32px] mb-[40px] xl:mb-0 max-w-[240px] font-semibold text-[16px] leading-[16px]"
                                         type="submit"
                                     >
                                         Оставить заявку
                                     </button>
                                 </div>
+                                <label
+                                    class="form light text-left form__checkbox-container form__checkbox-light text-[14px] leading-[21px]"
+                                >
+                                    I consent to the processing of my personal
+                                    data in accordance with the terms of the
+                                    <a href="#" class="underline">
+                                        <b>privacy policy</b>
+                                    </a>
+                                    <input type="checkbox" />
+                                    <span class="checkmark pt-[10px]"></span>
+                                </label>
                             </form>
                         </div>
                     </div>
@@ -1904,9 +1953,40 @@
                 </div>
             </div>
         </section>
-        <section class="py-[120px] bg-card-main form">
+        <section class="py-[120px] bg-card-main form relative">
             <div
-                class="max-w-[630px] mx-auto bg-white py-[60px] sm:py-[80px] px-[40px] sm:px-[115px]"
+                class="absolute top-[20px] min-h-[260px] flex items-stretch left-0 right-0 w-auto overflow-hidden"
+            >
+                <img
+                    class="block mx-auto object-cover"
+                    src="/img/form/bg-icons.svg"
+                    alt=""
+                />
+            </div>
+            <div
+                class="hidden lg:flex absolute bottom-[0px] max-h-[501px] justify-start items-stretch left-0 right-50% w-auto overflow-hidden"
+            >
+                <img
+                    class="block"
+                    height="501"
+                    width="745"
+                    src="/img/form/bg-left-illustration.png"
+                    alt=""
+                />
+            </div>
+            <div
+                class="hidden lg:flex absolute bottom-[0px] max-h-[491px] justify-end items-stretch left-[50%] right-[5%] w-auto overflow-hidden"
+            >
+                <img
+                    class="block"
+                    height="491"
+                    width="493"
+                    src="/img/form/bg-right-illustration.png"
+                    alt=""
+                />
+            </div>
+            <div
+                class="max-w-[630px] mx-auto bg-white py-[60px] sm:py-[80px] px-[40px] sm:px-[115px] relative z-[5]"
             >
                 <h2
                     class="mb-[16px] text-center text-[32px] font-semibold leading-[38px]"
@@ -1919,27 +1999,27 @@
                 </p>
                 <div class="mb-[40px]">
                     <input
-                        class="w-[100%] pb-[12px] border-border-dark border-b-[1px] text-[16px] leading-[25.6px] focus:outline-none"
+                        class="w-[100%] pb-[12px] rounded-none border-border-dark border-b-[1px] text-[16px] leading-[25.6px] focus:outline-none"
                         placeholder="Имя"
                         type="text"
                     />
                 </div>
                 <div class="mb-[40px]">
                     <input
-                        class="w-[100%] pb-[12px] border-border-dark border-b-[1px] text-[16px] leading-[25.6px] focus:outline-none"
+                        class="w-[100%] pb-[12px] rounded-none border-border-dark border-b-[1px] text-[16px] leading-[25.6px] focus:outline-none"
                         placeholder="Компания"
                         type="text"
                     />
                 </div>
                 <div class="mb-[40px]">
                     <input
-                        class="w-[100%] pb-[12px] border-border-dark border-b-[1px] text-[16px] leading-[25.6px] focus:outline-none"
+                        class="w-[100%] pb-[12px] rounded-none border-border-dark border-b-[1px] text-[16px] leading-[25.6px] focus:outline-none"
                         placeholder="Телефон"
                         type="text"
                     />
                 </div>
                 <label
-                    class="form__checkbox-container text-[14px] leading-[21px] mb-[40px]"
+                    class="form light form__checkbox-container form__checkbox-light text-[14px] leading-[21px] mb-[40px]"
                 >
                     I consent to the processing of my personal data in
                     accordance with the terms of the
@@ -1952,8 +2032,156 @@
                 </button>
             </div>
         </section>
-        <footer class="footer">
-            <div class="container"></div>
+        <footer class="footer bg-text-dark text-white">
+            <div class="container">
+                <div class="grid grid-cols-20">
+                    <div
+                        class="col-span-20 xl:col-span-5 py-[20px] border-border-footer sm:border-r-[1px] border-b-[1px] hidden xl:block"
+                    >
+                        <div class="flex justify-start">
+                            <img src="/img/footer/logo.svg" alt="" />
+                        </div>
+                    </div>
+                    <div
+                        class="col-span-20 py-[60px] xl:py-0 xl:col-span-15 flex items-center border-border-footer border-b-[1px]"
+                    >
+                        <div class="w-[100%] flex justify-around">
+                            <a class="text-[18px] leading-[18px]" href="#">
+                                Locations
+                            </a>
+                            <a class="text-[18px] leading-[18px]" href="#">
+                                About us
+                            </a>
+                            <a class="text-[18px] leading-[18px]" href="#">
+                                Services
+                            </a>
+                            <a class="text-[18px] leading-[18px]" href="#">
+                                Tools
+                            </a>
+                            <a class="text-[18px] leading-[18px]" href="#">
+                                Contacts
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="col-span-20 sm:col-span-10 xl:col-span-5 p-[30px] lg:p-[60px] xl:p-0 xl:py-[60px] xl:pr-[46px] border-border-footer sm:border-r-[1px] border-b-[1px] xl:border-b-0"
+                    >
+                        <p class="mb-[26px] text-[16px] leading-[16px]">
+                            Newsletter Subscription
+                        </p>
+                        <div class="relative">
+                            <input
+                                class="mb-[18px] w-[100%] pb-[12px] rounded-none border-border-footer border-b-[1px] text-[16px] leading-[25.6px] focus:outline-none bg-transparent"
+                                placeholder="Your email"
+                                type="text"
+                            />
+                            <button
+                                class="absolute right-0 top-[calc(50%)] translate-y-[-175%]"
+                            >
+                                <img
+                                    src="/img/footer/button-arrow.svg"
+                                    alt=""
+                                />
+                            </button>
+                        </div>
+                        <label
+                            class="form dark form__checkbox-container form__checkbox-light text-[14px] leading-[21px] mb-[40px]"
+                        >
+                            I consent to the processing of my personal data in
+                            accordance with the terms of the
+                            <a href="#" class="underline">
+                                <b>privacy policy</b>
+                            </a>
+                            <input type="checkbox" />
+                            <span class="checkmark pt-[10px]"></span>
+                        </label>
+                    </div>
+                    <div class="col-span-20 sm:col-span-10 xl:col-span-7 p-[30px] lg:p-[60px] border-border-footer xl:border-r-[1px] border-b-[1px] xl:border-b-0">
+                        <p class="mb-[26px] text-[16px] leading-[16px]">
+                            Our office
+                        </p>
+                        <p
+                            class="leading-[24px] text-[16px] font-light pb-[15px]"
+                        >
+                            <a href="#">
+                                USA. New York, 10006. 165 Broadway, 23rd Floor
+                            </a>
+                        </p>
+                        <p
+                            class="leading-[24px] text-[16px] font-light pb-[15px]"
+                        >
+                            <a href="#">
+                                Ireland. Dublin 2, D02 ED70, 13-18 City Quay
+                            </a>
+                        </p>
+                        <p
+                            class="leading-[24px] text-[16px] font-light pb-[15px]"
+                        >
+                            <a href="#">
+                                Cyprus. Larnaca, 6058. Spyrou Kyprianou Avenue
+                                32, Issa Court, Office 104.
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-span-20 sm:col-span-10 xl:col-span-5 p-[30px] lg:p-[60px] border-border-footer sm:border-r-[1px] border-b-[1px] sm:border-b-0">
+                        <p class="mb-[26px] text-[16px] leading-[16px]">
+                            Contact us
+                        </p>
+                        <p
+                            class="leading-[24px] text-[16px] font-light pb-[15px]"
+                        >
+                            New York:
+                            <a href="tel: +1 (347) 897-9941">
+                                +1 (347) 897-9941
+                            </a>
+                        </p>
+                        <p
+                            class="leading-[24px] text-[16px] font-light pb-[15px]"
+                        >
+                            Larnaca:
+                            <a href="tel: +357 957-56397">+357 957-56397</a>
+                        </p>
+                        <p
+                            class="leading-[24px] text-[16px] font-light pb-[15px]"
+                        >
+                            E-mail:
+                            <a href="mailto: info@brandpolgroup.com">
+                                info@brandpolgroup.com
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-span-10 xl:col-span-3 pl-[30px] pt-[30px] lg:pl-[60px] lg:pt-[60px] ">
+                        <p class="mb-[26px] text-[16px] leading-[16px]">
+                            Social
+                        </p>
+                        <p
+                            class="leading-[24px] text-[16px] font-light pb-[15px]"
+                        >
+                            <img
+                                class="inline-block mr-[10px]"
+                                src="/img/footer/facebook.svg"
+                                alt=""
+                            />
+                            <a class="leading-[24px] text-[16px]" href="#">
+                                Facebook
+                            </a>
+                        </p>
+
+                        <p
+                            class="leading-[24px] text-[16px] font-light pb-[15px]"
+                        >
+                            <img
+                                class="inline-block mr-[10px]"
+                                src="/img/footer/youtube.svg"
+                                alt=""
+                            />
+                            <a class="leading-[24px] text-[16px]" href="#">
+                                Youtube
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </footer>
 
         <script src="./js/scripts.js"></script>

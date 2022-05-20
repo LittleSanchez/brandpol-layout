@@ -1,5 +1,9 @@
 @tailwind base;
 @layer base {
+  .form.dark * {
+    --lines: white; }
+  .form.light * {
+    --lines: black; }
   .form__checkbox-container {
     display: block;
     position: relative;
@@ -17,7 +21,7 @@
       width: 0; }
     .form__checkbox-container:hover input ~ .checkmark {
       background-color: transparent;
-      border: 1px solid black; }
+      border: 1px solid var(--lines); }
     .form__checkbox-container input:checked ~ .checkmark {
       background-color: transparent; }
     .form__checkbox-container input:checked ~ .checkmark:after {
@@ -30,20 +34,20 @@
     width: 30%;
     height: auto;
     margin: auto auto;
-    border: solid black;
+    border: solid var(--lines);
     border-width: 0 1px 1px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
-  .form .checkmark {
+  .checkmark {
     position: absolute;
     top: 3px;
     left: 0;
     height: 16px;
     width: 16px;
-    background-color: #eee;
-    border: 1px solid black; }
-  .form .checkmark:after {
+    background-color: transparent;
+    border: 1px solid var(--lines); }
+  .checkmark:after {
     content: "";
     position: absolute;
     display: none; } }
