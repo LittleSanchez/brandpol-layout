@@ -1,11 +1,33 @@
 @layer base{
 
-    .btn {
+    .button{
         &-solid {
             @apply bg-brand border-brand border-[1px] text-text-dark w-[100%] max-w-[236px] py-[20px] font-semibold text-[18px];
+            &-hover {
+                @apply bg-brandDark border-brandDark
+            }
         }
         &-outline {
             @apply bg-transparent text-brand border-brand border-[1px] w-[100%] max-w-[236px] py-[20px] font-semibold text-[18px];
+            &-hover {
+                @apply text-brandDark border-brandDark
+            }
+        }
+    }
+
+
+    .btn {
+        &-solid {
+            @apply button-solid;
+            &:hover {
+                @apply button-solid-hover;
+            }
+        }
+        &-outline {
+            @apply button-outline;
+            &:hover {
+                @apply button-outline-hover
+            }
         }
     }
 }

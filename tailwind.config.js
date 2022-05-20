@@ -59,6 +59,7 @@ module.exports = {
             },
             colors: {
                 brand: "#FFB000",
+                brandDark: "#dd9000",
                 card: {
                     main: "#F5F2EA",
                     light: "#FCFCFC",
